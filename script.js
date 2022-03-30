@@ -23,6 +23,11 @@ const app = new Vue({
                 //scrivo questo per resettare l'input ogni volta che inserisco del testo
                 this.newToDo= '';
             }
+        },
+        //metodo per eliminare il task se si clicca il tasto X nell'html
+        deleteTask(index){
+            
         }
+        
     }
 })

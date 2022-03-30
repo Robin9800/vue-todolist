@@ -20,12 +20,12 @@
                     @click="taskIsDone(index)" 
                     v-if="!doneToDo.includes(index)">
                         <div class="item" >
-                            <i class="fa-solid fa-circle-xmark"></i> {{item}}
+                            <i @click="deleteTask(index)" class="fa-solid fa-circle-xmark"></i> {{item}}
                         </div>
                     </li>
                 </ul>
                 <div class="add-todo-list">
-                    <!--attraverso un input di testo è possibie aggiungere cose da fare-->
+                    <!--attraverso un input di testo aggiungo cose da fare-->
                     <input type="text" 
                     v-model="newToDo" 
                     placeholder="Aggiungi task"
