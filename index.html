@@ -25,7 +25,13 @@
                     </li>
                 </ul>
                 <!--attraverso un input di testo è possibie aggiungere cose da fare-->
-                <input type="text" v-model="newToDo" placeholder="Aggiungi task">
+                <input type="text" 
+                v-model="newToDo" 
+                placeholder="Aggiungi task"
+                @keyUp.enter="addNewToDo">
+                <!--inserisco un bottone con un click che mi rimanda alla funzione nello
+                script per aggiungere il testo alla toDoList-->
+                <button @click="addNewToDo">INSERISCI</button>
             </div>
             <div class="todo-list">
                 <h2>DONE LIST</h2>

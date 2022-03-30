@@ -15,7 +15,14 @@ const app = new Vue({
     methods: {
         taskIsDone(todoIndex){
             this.doneToDo.push(todoIndex);
+        },
+        //metodo per inserire nella lista dei to do quello che viene scritto nell'input
+        addNewToDo(){
+            if(this.newToDo.length > 0){
+                this.toDoList.unshift(this.newToDo);
+                //scrivo questo per resettare l'input ogni volta che inserisco del testo
+                this.newToDo= '';
+            }
         }
-        
     }
 })
