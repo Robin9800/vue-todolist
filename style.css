@@ -26,9 +26,20 @@ body{
     background-color: aquamarine;
     padding: 6px 0px;
 }
-.todo-list{
-    margin-bottom: 8px
-}
 input{
     margin: 8px;
+}
+.add-todo-list{
+    text-align: center;
+}
+button{
+    border: 1px solid black;
+    padding: 2px;
+    background-color: aquamarine;
+}
+.item i{
+    color: rgb(250, 184, 1);
+}
+.item-done i{
+    color: aquamarine;
 }
