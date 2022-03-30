@@ -15,15 +15,17 @@
                 <h1>TO DO LIST</h1>
                 <ul>
                     <!--visualizzare tutti i todo-->
-                    <!--Se l'indice cliccato dall'utente è presente nell'array deletedtodo allora cancellalo-->
+                    <!--Se l'indice cliccato dall'utente è presente nell'array doneToDo allora cancellalo-->
                     <li v-for="(item, index) in toDoList" 
                     @click="taskIsDone(index)" 
-                    v-if="!deletedToDo.includes(index)">
+                    v-if="!doneToDo.includes(index)">
                         <div class="item" >
                             <i class="fa-solid fa-circle-check"></i> {{item}}
                         </div>
                     </li>
                 </ul>
+                <!--attraverso un input di testo è possibie aggiungere cose da fare-->
+                <input type="text" v-model="newToDo" placeholder="Aggiungi task">
             </div>
             <div class="todo-list">
                 <h2>DONE LIST</h2>
@@ -31,12 +33,13 @@
                     <!--visualizzare tutti i todo-->
                     <!--Se l'indice cliccato dall'utente è presente nell'array deletedtodo allora cancellalo-->
                     <li v-for="(item, index) in toDoList" 
-                    v-if="deletedToDo.includes(index)">
+                    v-if="doneToDo.includes(index)">
                         <div class="item" >
                             <i class="fa-solid fa-circle-check"></i> {{item}}
                         </div>
                     </li>
                 </ul>
+                
             </div>
         </div>
     </div>

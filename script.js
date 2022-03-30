@@ -9,11 +9,12 @@ const app = new Vue({
     //- visualizzare tutti i todo
     data: {
         toDoList: ['fare la spesa', 'fare gli esercizi', 'scendere il cane'],
-        deletedToDo: []
+        doneToDo: [],
+        newToDo: ''
     },
     methods: {
         taskIsDone(todoIndex){
-            this.deletedToDo.push(todoIndex);
+            this.doneToDo.push(todoIndex);
         }
         
     }
