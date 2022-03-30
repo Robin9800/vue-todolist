@@ -8,7 +8,7 @@ const app = new Vue({
     el: '#todo',
     //- visualizzare tutti i todo
     data: {
-        toDoList: ['fare la spesa', 'fare gli esercizi'],
+        toDoList: ['fare la spesa', 'fare gli esercizi', 'scendere il cane'],
         deletedToDo: []
     },
     methods: {
