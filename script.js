@@ -6,7 +6,15 @@ di cose da fare:
 
 const app = new Vue({
     el: '#todo',
+    //- visualizzare tutti i todo
     data: {
-        toDoList: ['fare la spesa', 'fare gli esercizi']
+        toDoList: ['fare la spesa', 'fare gli esercizi'],
+        deletedToDo: []
+    },
+    methods: {
+        taskIsDone(todoIndex){
+            this.deletedToDo.push(todoIndex);
+        }
+        
     }
 })
